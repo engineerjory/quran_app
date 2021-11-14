@@ -1,4 +1,5 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithHeader extends StatelessWidget {
   @override
@@ -6,7 +7,7 @@ class HadithHeader extends StatelessWidget {
     return Container(
       alignment: Alignment.center,
       child: Text(
-        ' الاحاديث',
+        AppLocalizations.of(context)!.alahadith,
         style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
       ),
       decoration: BoxDecoration(

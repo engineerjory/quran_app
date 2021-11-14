@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:quran_app/screens/hadith_screen.dart';
 import 'package:quran_app/screens/home_screen.dart';
 import 'package:quran_app/screens/radio_screen.dart';
@@ -19,6 +21,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      localizationsDelegates: [
+        AppLocalizations.delegate, // Add this line
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        Locale('en', ''), // English, no country code
+        Locale('ar', ''), // arabic, no country code
+      ],
+      locale: Locale('en', ''),
       title: 'Quran App ',
       routes: {
         SplashScreen.RouteName: (context) => SplashScreen(),

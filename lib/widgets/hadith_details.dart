@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:quran_app/models/hadeth_data.dart';
 import 'package:quran_app/models/quran_data.dart';
 import 'package:quran_app/screens/hadith_screen.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class HadithDetails extends StatefulWidget {
   static final String RouteName = 'HadithDetails';
@@ -55,7 +56,7 @@ class _HadithDetailsState extends State<HadithDetails> {
             ),
             title: Center(
               child: Text(
-                'islamy',
+                AppLocalizations.of(context)!.islami,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 30,
