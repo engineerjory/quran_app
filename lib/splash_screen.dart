@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quran_app/home_screen.dart';
+import 'package:quran_app/screens/home_screen.dart';
 
 class SplashScreen extends StatelessWidget {
   static final String RouteName = "splashScreen";
