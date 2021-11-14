@@ -5,6 +5,7 @@ import 'package:quran_app/screens/radio_screen.dart';
 import 'package:quran_app/screens/sebha_screen.dart';
 import 'package:quran_app/widgets/quran_screen.dart';
 import 'package:quran_app/widgets/sura_details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'hadith_screen.dart';
 
@@ -50,7 +51,7 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0,
           title: Center(
             child: Text(
-              'islamy',
+              AppLocalizations.of(context)!.islami,
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 30,
@@ -76,16 +77,16 @@ class _HomeScreenState extends State<HomeScreen> {
           items: [
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage('assets/icons/radio_blue.png')),
-                label: 'Radio'),
+                label: AppLocalizations.of(context)!.radio),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage('assets/icons/sebha.png')),
-                label: 'Sebha'),
+                label: AppLocalizations.of(context)!.sebha),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage('assets/icons/hadith.png')),
-                label: 'Hadith'),
+                label: AppLocalizations.of(context)!.ahadith),
             BottomNavigationBarItem(
                 icon: ImageIcon(AssetImage('assets/icons/moshaf_blue.png')),
-                label: 'Quran'),
+                label: AppLocalizations.of(context)!.quran),
           ],
         ),
         body: screens[currentScreenIndex],

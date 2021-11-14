@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:math' as math;
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SebhaScreen extends StatefulWidget {
   static final String RouteName = 'SebhaScreen';
@@ -13,15 +14,16 @@ class _SebhaScreenState extends State<SebhaScreen> {
   int counter = 0;
   double angle = 0;
   int index = 0;
-  List<String> zekr = [
-    'سبحان الله',
-    'الحمد لله',
-    'لا اله الا الله',
-    'الله اكبر'
-  ];
+  late List<String> zekr;
 
   @override
   Widget build(BuildContext context) {
+    zekr = [
+      AppLocalizations.of(context)!.sobhanAllah,
+      AppLocalizations.of(context)!.alhamdoLelah,
+      AppLocalizations.of(context)!.laElahaElaAllah,
+      AppLocalizations.of(context)!.allahoAkbar,
+    ];
     return Container(
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -73,7 +75,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
                 ],
               ),
               Text(
-                'عدد التسبيحات ',
+                AppLocalizations.of(context)!.numOfTsbih,
                 textDirection: TextDirection.rtl,
                 // textAlign: TextAlign.center,
                 style: TextStyle(
@@ -84,7 +86,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
               Container(
                 padding: EdgeInsets.all(20),
                 child: Text(
-                  '$counter',
+                  " $counter",
                   style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                 ),
                 decoration: BoxDecoration(
@@ -113,7 +115,7 @@ class _SebhaScreenState extends State<SebhaScreen> {
     angle += 20;
     if (counter % 33 == 0) {
       index++;
-      if (index == 4) index = 0;
+      if (index == zekr.length) index = 0;
     }
   }
 }

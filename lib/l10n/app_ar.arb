@@ -1,0 +1,18 @@
+{
+  "helloWorld":"اهلا وسهلا !" ,
+  "islami" : "اسلامي",
+  "quran" : "قران",
+  "ahadith" : "احاديث",
+  "alahadith" : "الاحاديث",
+  "sebha" : "سبحة",
+  "radio" : "اذاعة",
+  "hadithnumber" : "الحديث رقم  ",
+  "suraName" : "اسم السورة ",
+  "numOfTsbih" : "عدد التسبيح  ",
+  "settings" : "الاعدادات",
+  "sobhanAllah" : "   سبحان الله ",
+  "alhamdoLelah" : " الحمد لله ",
+  "laElahaElaAllah" : "لا اله الا الله",
+  "allahoAkbar" : " الله اكبر ",
+  "quranRadio" : " اذاعة القران الكريم "
+}

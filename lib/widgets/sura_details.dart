@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:quran_app/models/quran_data.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SuraDetails extends StatefulWidget {
   static final String RouteName = 'SuraDetails';
@@ -45,7 +46,7 @@ class _SuraDetailsState extends State<SuraDetails> {
             ),
             title: Center(
               child: Text(
-                'islamy',
+                AppLocalizations.of(context)!.islami,
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 30,

@@ -1,0 +1,18 @@
+{
+  "helloWorld": "Hello World!",
+  "islami" : "islamy",
+  "quran" : "Quran",
+  "ahadith" : "Ahadith",
+  "alahadith" : "Al Ahadith",
+  "sebha" : "Sebha",
+  "radio" : "Radio",
+  "hadithnumber" : "Hadith Number ",
+  "suraName" : "Sura Name",
+  "numOfTsbih" : "Number of tasbih ",
+  "settings" : " Settings ",
+  "sobhanAllah" : " Sobhana Allah ",
+  "alhamdoLelah" : " Alhamdo LellaH ",
+  "laElahaElaAllah" : "La Elaha Ela Allah",
+  "allahoAkbar" : " Allaho Akbar",
+  "quranRadio" : "Quran Radio"
+}

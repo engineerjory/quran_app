@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class RadioScreen extends StatelessWidget {
   static final String RouteName = 'RadioScreen';
@@ -29,7 +30,7 @@ class RadioScreen extends StatelessWidget {
             Container(
               padding: EdgeInsets.all(8),
               child: Text(
-                'اذاعة القران الكريم',
+                AppLocalizations.of(context)!.quranRadio,
                 textDirection: TextDirection.rtl,
                 // textAlign: TextAlign.center,
                 style: TextStyle(
