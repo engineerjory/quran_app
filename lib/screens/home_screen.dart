@@ -1,5 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:quran_app/screens/radio_screen.dart';
+import 'package:quran_app/screens/sebha_screen.dart';
+import 'package:quran_app/widgets/quran_screen.dart';
+import 'package:quran_app/widgets/sura_details.dart';
+
+import 'hadith_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   static final String RouteName = 'homeScreen';
@@ -10,6 +17,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   late int currentScreenIndex;
+  List screens = [
+    RadioScreen(),
+    SebhaScreen(),
+    HadithScreen(),
+    QuranScreen(),
+  ];
 
   @override
   void initState() {
@@ -31,10 +44,13 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         backgroundColor: Colors.transparent,
         appBar: AppBar(
+          //to color the app bar icons like(wifi,clock,battery) with black color
+          systemOverlayStyle:
+              SystemUiOverlayStyle(statusBarIconBrightness: Brightness.dark),
           elevation: 0,
           title: Center(
             child: Text(
-              'اسلامي',
+              'islamy',
               style: TextStyle(
                   color: Colors.black,
                   fontSize: 30,
@@ -44,13 +60,6 @@ class _HomeScreenState extends State<HomeScreen> {
           backgroundColor: Colors.transparent,
         ),
         bottomNavigationBar: BottomNavigationBar(
-          //  Theme(
-          // data: Theme.of(context).copyWith(
-          //   // sets the background color of the `BottomNavigationBar`
-          //   canvasColor: Color.fromRGBO(183, 147, 95, 1.0),
-          // ),
-          //  child:
-          //BottomNavigationBar(
           type: BottomNavigationBarType.fixed,
           backgroundColor: Color.fromRGBO(183, 147, 95, 1.0),
           showUnselectedLabels: false,
@@ -79,9 +88,26 @@ class _HomeScreenState extends State<HomeScreen> {
                 label: 'Quran'),
           ],
         ),
+        body: screens[currentScreenIndex],
+
+        //changeItem(currentScreenIndex),
+
+        //QuranScreen(),
 
         //  ),
       ),
     );
+  }
+
+  Widget changeItem(int index) {
+    if (index == 0) {
+      return RadioScreen();
+    } else if (index == 1) {
+      return SebhaScreen();
+    } else if (index == 2) {
+      return HadithScreen();
+    } else {
+      return QuranScreen();
+    }
   }
 }
